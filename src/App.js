@@ -56,8 +56,8 @@ export default function App() {
           {/* <Route path="/delivery" element={<Delivery/>}/> */}
         </Routes>
         
-      <Page />
-      <Cart />
+      {/* <Page />
+      <Cart /> */}
       {/* <Example/> */}
       
     {/* </CartProvider> */}
