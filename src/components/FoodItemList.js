@@ -3,6 +3,15 @@ import React, { useEffect, useState } from "react";
 import ModalCard from "./ModalCard";
 import Modal from "react-bootstrap/Modal";
 import { CartProvider, useCart } from "react-use-cart";
+import OrderScreen from "../screens/OrderScreen";
+
+import {
+  Route,
+  Link,
+  Routes,
+  useParams,
+  BrowserRouter,
+} from "react-router-dom";
 
 export default function FoodItemList(props) {
   
@@ -62,6 +71,12 @@ export default function FoodItemList(props) {
         food={food}/>
       </Modal.Body>
     </Modal>
+    <Routes>
+    <Route path="/orders" element={<OrderScreen  addItem={addItem} inCart={inCart} setCartMetadata={setCartMetadata} isEmpty={isEmpty}
+        cartTotal={cartTotal} totalUniqueItems={totalUniqueItems} items={items} updateItemQuantity={updateItemQuantity}
+        removeItem={removeItem} emptyCart={emptyCart} metadata={metadata}
+        food={food}/>} />
+    </Routes>
     </CartProvider>
       </div>
     

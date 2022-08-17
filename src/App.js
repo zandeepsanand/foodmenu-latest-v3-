@@ -17,6 +17,7 @@ import OrderScreen from './screens/OrderScreen';
 import Example from './components/Example';
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import DeliveryScreen from './screens/DeliveryScreen';
 
 export default function App() {
   const [categories, setCategories] = useState([]);
@@ -49,18 +50,18 @@ export default function App() {
     }, [categories,foods]);
   return (
     <>
-    {/* <CartProvider> */}
+    <CartProvider>
      <Routes>
           <Route path="/" element={<HomeScreen categories = {categories} foods = {foods} />} />
-          <Route path="/orders" element={<OrderScreen categories = {categories} foods = {foods} />} />
-          {/* <Route path="/delivery" element={<Delivery/>}/> */}
+          {/* <Route path="/orders" element={<OrderScreen  />} /> */}
+          <Route path="/delivery" element={<DeliveryScreen/>}/>
         </Routes>
-        
-      {/* <Page />
+{/*         
+      <Page />
       <Cart /> */}
       {/* <Example/> */}
       
-    {/* </CartProvider> */}
+    </CartProvider>
     </>
   );
 

@@ -74,6 +74,11 @@
 color: 
 #535e79;
 }
+.font-color1{
+  color: 
+  #535e79;
+  font-size: medium;
+  }
 .card-image{
   align-items: center;
   border-radius: 10%;
