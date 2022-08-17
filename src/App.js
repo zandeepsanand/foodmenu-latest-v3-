@@ -50,18 +50,15 @@ export default function App() {
     }, [categories,foods]);
   return (
     <>
-    <CartProvider>
+   
      <Routes>
-          <Route path="/" element={<HomeScreen categories = {categories} foods = {foods} />} />
+          <Route path="*" element={<HomeScreen categories = {categories} foods = {foods} />} />
           {/* <Route path="/orders" element={<OrderScreen  />} /> */}
           <Route path="/delivery" element={<DeliveryScreen/>}/>
         </Routes>
-{/*         
-      <Page />
-      <Cart /> */}
-      {/* <Example/> */}
+
       
-    </CartProvider>
+    
     </>
   );
 
